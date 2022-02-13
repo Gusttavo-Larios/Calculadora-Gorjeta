@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculador de Gorjetas</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <section class="painel" id="left">
+        <label class="label-div-left"> Valor Bruto </label>
+        <div class="box-input" id="gross-value">
+          <span>R$</span>
+          <input
+            type="number"
+            name="gross-value"
+            class="input"
+            placeholder="0"
+            min="0"
+            onclick="removeAlert()"
+          />
+        </div>
+        <div class="box-discount">
+          <label class="label-div-left"> Selecione a Gorjeta %</label>
+          <div id="grid-discount">
+            <button class="value-discount button-discount" onclick="setDiscount(this)">5%</button>
+            <button class="value-discount button-discount" onclick="setDiscount(this)">10%</button>
+            <button class="value-discount button-discount" onclick="setDiscount(this)">15%</button>
+            <button class="value-discount button-discount" onclick="setDiscount(this)">25%</button>
+            <button class="value-discount button-discount" onclick="setDiscount(this)">50%</button>
+            <input
+              type="number"
+              class="value-discount"
+              id="input-discount"
+              placeholder="Custom"
+              max="100"
+              min="0"
+              onclick="setInputDiscount(this)"
+            />
+          </div>
+        </div>
+        <label class="label-div-left"> Número de Pessoas </label>
+        <div class="box-input" id="number-of-people">
+          <input
+            type="number"
+            name="number-people"
+            class="input"
+            placeholder="0"
+            min="0"
+            onchange="calc(this)"
+          />
+        </div>
+      </section>
+      <section class="painel" id="right">
+        <div class="results">
+          <div class="box-result">
+            <label class="label-div-right">
+              Valor da Gorjeta<br /><span>/ pessoa</span>
+            </label>
+            <span class="value-result" id="tip"> R$ 0,00 </span>
+          </div>
+          <div class="box-result">
+            <label class="label-div-right">
+              Total<br /><span>/ pessoa</span>
+            </label>
+            <span class="value-result" id="total"> R$ 0,00 </span>
+          </div>
+        </div>
+        <button type="button" id="button-reset" onclick="reset()">RESETAR</button>
+      </section>
+    </main>
+    <script src="js/index.js">
+    </script>
+  </body>
+</html>

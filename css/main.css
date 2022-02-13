@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Space Mono', monospace;
+}
+
+*:focus {
+    outline: 0;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+   background-color: hsl(0, 0%, 100%); 
+   box-shadow: 0rem 0rem 3rem .01rem hsl(0, 0%, 0%, 0.2);
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 65vw;
+   border-radius: 2rem;
+   box-sizing: border-box;
+   padding: 2.5rem;
+}
+
+.painel {
+    width: 48%;
+    box-sizing: border-box;
+    border-radius: 1.5rem;
+}
+
+#left {
+    height: 100%;
+}
+
+.label-div-left {
+    font-size: 1.4rem;
+    color: hsl(186,14%,43%);
+    font-weight: 700;
+}
+
+.box-input {
+    background-color: hsl(189, 41%, 97%);
+    height: 4.5rem;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.box-input input {
+    height: 70%;
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    text-align: right;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', monospace;
+}
+
+.box-input:focus {
+    border: 1px solid hsl(172, 67%, 45%);
+}
+
+.box-input span {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: hsl(184, 14%, 56%);
+}
+
+.box-input .warning {
+    border: .2rem solid red;
+}
+
+.box-discount {
+    margin: 4rem 0;
+}
+
+.box-discount #grid-discount {
+    height: 13vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: .8rem;
+    column-gap: .8rem;
+    margin: .8rem 0;
+}
+
+.box-discount #grid-discount .button-discount {
+    cursor: pointer;
+}
+
+.box-discount #grid-discount .value-discount {
+    height: 100%;
+    width: 100%;
+}
+
+.box-discount #grid-discount .value-discount {
+    background-color: hsl(183, 100%, 15%);
+    border: 0;
+    border-radius: .3rem;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.2rem;
+    box-sizing: border-box;
+    padding: 0 .5rem;
+}
+
+.box-discount #grid-discount .button-active {
+    background-color: hsl(172, 67%, 45%, 0.5);
+    color: hsl(183, 100%, 15%);
+}
+
+.box-discount #grid-discount #input-discount {
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', monospace;
+}
+
+.box-discount #grid-discount #input-discount:focus {
+    border: .2rem solid hsl(172, 67%, 45%);
+}
+
+.box-discount #grid-discount #input-discount::placeholder {
+    text-align: center;
+}
+
+.container #right {
+    background-color: hsl(183, 100%, 15%);
+    box-sizing: border-box;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem
+}
+
+#right .box-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#right .box-result .label-div-right {
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+#right .box-result .label-div-right span {
+    color:   hsl(186, 14%, 43%);
+    font-size: 1.3rem;
+}
+
+#right .box-result .value-result {
+    color: hsl(172, 67%, 45%);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#right #button-reset {
+    width: 100%;
+    height: 4rem;
+    border-radius: .5rem;
+    background-color: hsl(172, 67%, 45%, 0.3);
+    border: 0;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    transition: ease-in-out background .5s;
+}
+
+#right #button-reset:hover {
+    background-color: hsl(172,67%,45%);
+}
+
+.warning {
+    border: .2rem solid red;
+}
+
+/**
+Strong cyan: hsl(172, 67%, 45%)
+Neutral
+Very dark cyan: hsl(183, 100%, 15%)
+Dark grayish cyan: hsl(186, 14%, 43%)
+Dark grayish cyan: hsl(184, 14%, 56%)
+Light grayish cyan: hsl(185, 41%, 84%)
+Light grayish cyan: hsl(189, 41%, 97%)
+White: hsl(0, 0%, 100%)
